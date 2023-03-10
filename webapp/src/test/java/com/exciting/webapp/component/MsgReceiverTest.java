@@ -11,6 +11,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
 import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
 import java.util.Date;
 
 
@@ -24,7 +25,7 @@ class MsgReceiverTest {
     void contextLoads() throws UnsupportedEncodingException {
         Message msg =
                 MessageBuilder.withBody(("hello 江南一点雨"+new Date())
-                        .getBytes("UTF-8"))
+                        .getBytes(StandardCharsets.UTF_8))
                         .setHeader("x-delay", 3000)
                         .build();
         rabbitTemplate.convertAndSend(RabbitmqConfig.EXCHANGE_NAME, RabbitmqConfig.QUEUE_NAME, msg);
