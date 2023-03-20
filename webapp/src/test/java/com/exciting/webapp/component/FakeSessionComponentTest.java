@@ -55,21 +55,6 @@ public class FakeSessionComponentTest {
     public void clean() {
     }
 
-
-    /*public static void main(String[] args) throws ScriptException, NoSuchMethodException {
-
-
-        ScriptEngineManager factory = new ScriptEngineManager();
-        ScriptEngine engine = factory.getEngineByName("groovy");
-        String HelloLanguage = "def hello(language) {return \"Hello $language\"}";
-        engine.eval(HelloLanguage);
-        Invocable inv = (Invocable) engine;
-        Object[] params = {new String("Groovy")};
-        Object result = inv.invokeFunction("hello", params);
-        //assert result.equals("Hello Groovy");
-        System.out.println(result);
-    }*/
-
     public static void main(String[] args) throws ScriptException, NoSuchMethodException {
 
 
